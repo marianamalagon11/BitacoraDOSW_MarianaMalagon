@@ -3,12 +3,9 @@ package edu.dosw.bitacora.bitacora_DOSW.semana1.streams;
 import java.util.List;
 
 public class activeUsers {
-    public boolean getActive(List<List<String>> users){
-        for (List<String> user : users) {
-            if (user.get(3).equals("active")) {
-                return true;
-            }
-        }
+
+    public boolean getActive(List<String> user){
+        return user.get(3).equals("active");
     }
 
     public String getName(List<String> user){
@@ -25,10 +22,12 @@ public class activeUsers {
                 List.of("u1" , "messi", "38", "inactive"),
                 List.of("u4" , "the weekend", "35", "active")
         );
-        users.stream().filter(user -> user.getActive(u) == True)
-                        .map(u -> user.getName(u)).toUpperCase())
+        activeUsers activeUsers = new activeUsers();
+        List<String> names = users.stream()
+                .filter(user -> activeUsers.getActive(user))
+                        .map(user -> activeUsers.getName(user).toUpperCase())
                         .sorted().toList();
 
-        System.out.println();
+        System.out.println(names);
     }
 }
