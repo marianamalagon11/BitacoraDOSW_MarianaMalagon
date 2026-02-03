@@ -2,7 +2,7 @@ package edu.dosw.bitacora.bitacora_DOSW.semana1.streams;
 
 import java.util.List;
 
-public class activeUsers {
+public class ActiveUsers {
 
     public boolean getActive(List<String> user){
         return user.get(3).equals("active");
@@ -22,7 +22,7 @@ public class activeUsers {
                 List.of("u1" , "messi", "38", "inactive"),
                 List.of("u4" , "the weekend", "35", "active")
         );
-        activeUsers activeUsers = new activeUsers();
+        ActiveUsers activeUsers = new ActiveUsers();
         List<String> names = users.stream()
                 .filter(user -> activeUsers.getActive(user))
                         .map(user -> activeUsers.getName(user).toUpperCase())

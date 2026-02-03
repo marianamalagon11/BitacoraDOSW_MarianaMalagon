@@ -2,7 +2,7 @@ package edu.dosw.bitacora.bitacora_DOSW.semana1.streams;
 
 import java.util.List;
 
-public class adultsName {
+public class AdultsName {
 
     public boolean isAdult(List<String> user){
         String ageS = user.get(2);
@@ -23,7 +23,7 @@ public class adultsName {
                 List.of("u1" , "messi", "38", "inactive"),
                 List.of("u4" , "the weekend", "35", "active")
         );
-        adultsName adultsName = new adultsName();
+        AdultsName adultsName = new AdultsName();
         List<String> names = users.stream()
                 .filter(user -> adultsName.isAdult(user))
                 .map(user -> adultsName.getName((user)))
