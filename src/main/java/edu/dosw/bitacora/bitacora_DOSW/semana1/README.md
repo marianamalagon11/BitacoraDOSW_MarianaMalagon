@@ -20,7 +20,7 @@ List<String> words = List.of("java", "stream", "api", "functional", "code", "git
 
 ## Ejercicio 4: Dada una lista de usuarios con id, nombre, categoría y precio, obtener el nombre de los adultos
 ## Lista de ejemplo:
-![Uploading image.png…]()
+![img_4.png](../images/img_4.png)
 
 
 ## Resultado:
