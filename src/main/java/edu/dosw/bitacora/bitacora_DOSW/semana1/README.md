@@ -20,6 +20,17 @@ List<String> words = List.of("java", "stream", "api", "functional", "code", "git
 
 ## Ejercicio 4: Dada una lista de usuarios con id, nombre, categoría y precio, obtener el nombre de los adultos
 ## Lista de ejemplo:
+![Uploading image.png…]()
+
+
+## Resultado:
+![img_5.png](../images/img_5.png)
+
+## Ejercicio 5: Dada una lista de transacciones bancarias representadas por objetos Se requiere procesar la lista usando Streams para:
+Usar peek para ver cada transacción procesada (Utilizar System.out.println para ver la transaccion)
+Verificar si existe al menos una transacción no aprobada
+Retornar true o false indicando si el lote de transacciones es válido.
+## Lista de ejemplo:
 ![img_4.png](../images/img_4.png)
 
 ## Resultado:
