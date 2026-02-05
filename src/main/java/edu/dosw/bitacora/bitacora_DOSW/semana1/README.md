@@ -31,7 +31,7 @@ Usar peek para ver cada transacción procesada (Utilizar System.out.println para
 Verificar si existe al menos una transacción no aprobada
 Retornar true o false indicando si el lote de transacciones es válido.
 ## Lista de ejemplo:
-![img_4.png](../images/img_4.png)
+![img_6.png](../images/img_6.1.png)
 
 ## Resultado:
-![img_5.png](../images/img_5.png)
+![img_7.png](../images/img_7.png)
