@@ -411,15 +411,29 @@ Decisiones basadas en observación y experimentación.
 - Respeto
 - Apertura
 
-## Roles
-- Scrum Master
-- Product Owner
-- Scrum Team
+## Roles en Scrum
 
-## Artefactos
-- Product Backlog
-- Sprint Backlog
-- Product Increment
+### Scrum Master
+Es el facilitador del equipo y responsable de que Scrum se aplique correctamente. Elimina impedimentos, guía las ceremonias y promueve la mejora continua, asegurando que el equipo trabaje de manera efectiva.
+
+### Product Owner
+Es el responsable del producto y de maximizar su valor. Define qué se debe construir, prioriza el Product Backlog y representa los intereses del cliente y los stakeholders.
+
+### Scrum Team
+Es el equipo de trabajo que desarrolla el producto. Se autoorganiza, decide cómo realizar las tareas y entrega un incremento funcional al final de cada sprint.
+
+---
+
+## Artefactos en Scrum
+
+### Product Backlog
+Es la lista priorizada y dinámica de todos los requisitos, funcionalidades y mejoras que necesita el producto. Es responsabilidad del Product Owner y evoluciona constantemente.
+
+### Sprint Backlog
+Es el conjunto de elementos seleccionados del Product Backlog para trabajarse en un sprint específico, junto con las tareas necesarias para completarlos. Es gestionado por el Scrum Team.
+
+### Product Increment
+Es el resultado del trabajo realizado durante el sprint. Debe ser una versión funcional y potencialmente entregable del producto que cumpla con la definición de terminado.
 
 ---
 
