@@ -167,69 +167,89 @@ Grado en que los elementos trabajan unidos hacia un mismo objetivo.
 
 ## 🟦 Creacionales
 - **Factory Method** → Interfaz para crear objetos.
+  
   <img width="767" height="580" alt="image" src="https://github.com/user-attachments/assets/3613d4d6-8feb-487d-95bc-c804612ebf4a" />
 
 - **Abstract Factory** → Produce familias de objetos relacionados.
+  
   <img width="684" height="526" alt="image" src="https://github.com/user-attachments/assets/69f62a9c-1e21-4763-8020-fabe9d606021" />
 
 - **Builder** → Construcción paso a paso.
+  
  <img width="576" height="590" alt="image" src="https://github.com/user-attachments/assets/aa7e1011-3299-47d7-a968-386877b3152b" />
 
 - **Prototype** → Copia objetos existentes.
+  
   <img width="825" height="628" alt="image" src="https://github.com/user-attachments/assets/a962bd61-61f9-48ce-8039-76268e07f7fd" />
 
 - **Singleton** → Una única instancia.
+  
   <img width="684" height="459" alt="image" src="https://github.com/user-attachments/assets/c565240f-67fc-4bb6-bed9-10ee7e61af23" />
 
 
 ## 🟩 Estructurales
 - **Adapter** → Interfaces incompatibles.
+  
   <img width="740" height="577" alt="image" src="https://github.com/user-attachments/assets/8deee0a2-dce3-43a4-9faa-6d7587165988" />
 
 - **Bridge** → Divide clase grande en clases relacionadas.
+  
   <img width="672" height="492" alt="image" src="https://github.com/user-attachments/assets/107e1932-43a8-41ad-a12e-758cd2ee6d08" />
 
 - **Composite** → Estructura en árbol.
+  
   <img width="889" height="500" alt="image" src="https://github.com/user-attachments/assets/e44b764c-6f33-4223-b66f-73d3f21a3eb6" />
 
 - **Decorator** → Agrega comportamiento envolviendo objetos.
+  
   <img width="921" height="623" alt="image" src="https://github.com/user-attachments/assets/94afd2e7-f59a-4bc6-9e32-c467dc978df4" />
 
 - **Facade** → Interfaz simplificada.
 - **Flyweight** → Optimiza memoria.
 - **Proxy** → Sustituto de otro objeto.
+  
   <img width="921" height="448" alt="image" src="https://github.com/user-attachments/assets/62b4dae6-9162-41db-8600-eb750bab122c" />
 
 
 ## 🟪 Comportamiento
 - **Chain of Responsibility** → Cadena de manejadores.
+  
   <img width="565" height="496" alt="image" src="https://github.com/user-attachments/assets/543d8767-4f24-46ec-8a84-cbbec503fea1" />
 
 - **Command** → Solicitud convertida en objeto.
+  
   <img width="693" height="431" alt="image" src="https://github.com/user-attachments/assets/c362a341-f0ca-477a-844b-3bd949012e27" />
 
 - **Iterator** → Recorrer colección sin exponer estructura.
+  
   <img width="530" height="421" alt="image" src="https://github.com/user-attachments/assets/a762ed17-e5eb-455c-910f-3bbb7d37faad" />
 
 - **Mediator** → Reduce dependencias.
+  
   <img width="670" height="556" alt="image" src="https://github.com/user-attachments/assets/9101b7a8-c0d0-4b1f-8c28-0120e65892b5" />
 
 - **Memento** → Guardar/restaurar estado.
+  
   <img width="570" height="303" alt="image" src="https://github.com/user-attachments/assets/6441cff3-f26a-425a-9f43-6e74e9c7a968" />
 
 - **Observer** → Notificación de cambios.
+  
   <img width="554" height="285" alt="image" src="https://github.com/user-attachments/assets/11dfcc15-a04c-43a3-bd9d-abcc8c1e5b76" />
 
 - **State** → Cambia comportamiento según estado.
+  
   <img width="657" height="487" alt="image" src="https://github.com/user-attachments/assets/94aeead0-b08e-4155-915c-8da181124f19" />
 
 - **Strategy** → Algoritmos intercambiables.
+  
   <img width="378" height="304" alt="image" src="https://github.com/user-attachments/assets/8d6bcb26-a282-4b10-8ef2-5af440400980" />
 
 - **Template Method** → Esqueleto de algoritmo.
+  
   <img width="380" height="386" alt="image" src="https://github.com/user-attachments/assets/63375f9b-196a-4cf5-bd3d-22a05b057183" />
 
 - **Visitor** → Separar algoritmos de objetos.
+  
   <img width="439" height="430" alt="image" src="https://github.com/user-attachments/assets/2d4dc11a-e5a0-4d32-85f6-174a5cf322ac" />
 
 
