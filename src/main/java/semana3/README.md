@@ -1,51 +1,51 @@
 ## Semana 3
 ### Factory Method comercio electronico 
-![img.png](semana3/images/img.png)
+![img.png](images/img.png)
 ### Resultado:
-![img_2.png](semana3/images/img_2.png)
+![img_2.png](images/img_2.png)
 ### Abstract Factory - Empresa de Videojuegos (Xbox y PlayStation)
-![img_3.png](semana3/images/img_3.png)
+![img_3.png](images/img_3.png)
 ### Resultado: 
-![img_4.png](semana3/images/img_4.png)
+![img_4.png](images/img_4.png)
 ### Builder - Fabrica de juguetes
-![img_5.png](semana3/images/img_5.png)
+![img_5.png](images/img_5.png)
 ### Resultado:
-![img_6.png](semana3/images/img_6.png)
+![img_6.png](images/img_6.png)
 ### Adapter - Gasolineria Inteligente
-![img_7.png](semana3/images/img_7.png)
+![img_7.png](images/img_7.png)
 ### Resultado:
-![img_8.png](semana3/images/img_8.png)
+![img_8.png](images/img_8.png)
 ### Bridge - Figuras y Colores
-![img_9.png](semana3/images/img_9.png)
+![img_9.png](images/img_9.png)
 ### Resultado:
-![img_10.png](semana3/images/img_10.png)
+![img_10.png](images/img_10.png)
 ### Composite - Bodega de productos
-![img_11.png](semana3/images/img_11.png)
+![img_11.png](images/img_11.png)
 ### Resultado:
-![img_12.png](semana3/images/img_12.png)
+![img_12.png](images/img_12.png)
 ### Decorador - Simulador de batalla naval
-![img_13.png](semana3/images/img_13.png)
+![img_13.png](images/img_13.png)
 ### Resultado:
-![img_14.png](semana3/images/img_14.png)
+![img_14.png](images/img_14.png)
 ### Chain of responsability - Embajada de estados unidos
-![img_15.png](semana3/images/img_15.png)
+![img_15.png](images/img_15.png)
 ### Resultado:
-![img_16.png](semana3/images/img_16.png)
+![img_16.png](images/img_16.png)
 ### Command - Personajes de videojuegos
-![img_17.png](semana3/images/img_17.png)
+![img_17.png](images/img_17.png)
 ### Resultado:
-![img_20.png](semana3/images/img_20.png)
+![img_20.png](images/img_20.png)
 ### Iterator - Viaje a roma (diagrama)
-![img_21.png](semana3/images/img_21.png)
-![img_22.png](semana3/images/img_22.png)
-![img_23.png](semana3/images/img_23.png)
-![img_24.png](semana3/images/img_24.png)
+![img_21.png](images/img_21.png)
+![img_22.png](images/img_22.png)
+![img_23.png](images/img_23.png)
+![img_24.png](images/img_24.png)
 ### Resultado:
-![img_25.png](semana3/images/img_25.png)
+![img_25.png](images/img_25.png)
 ### Strategy - Aplicacion de navegacion
-![img_26.png](semana3/images/img_26.png)
+![img_26.png](images/img_26.png)
 ### Resultado: 
-![img_27.png](semana3/images/img_27.png)
+![img_27.png](images/img_27.png)
 
 ### Reflexión: 
 ¿Qué entendía mal antes?
