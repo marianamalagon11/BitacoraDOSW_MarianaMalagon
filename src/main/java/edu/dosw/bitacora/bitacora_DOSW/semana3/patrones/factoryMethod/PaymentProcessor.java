@@ -1,0 +1,9 @@
+package edu.dosw.bitacora.bitacora_DOSW.semana3.patrones.factoryMethod;
+
+public abstract class PaymentProcessor {
+    public abstract Payment createPayment(double amount);
+    public void processPayment(double amount) {
+        Payment payment = createPayment(amount);
+        payment.pay(amount);
+    }
+}
