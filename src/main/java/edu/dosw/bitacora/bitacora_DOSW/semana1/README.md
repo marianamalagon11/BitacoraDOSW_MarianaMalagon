@@ -35,3 +35,17 @@ Retornar true o false indicando si el lote de transacciones es válido.
 
 ## Resultado:
 ![img_7.png](../images/img_7.png)
+
+### Reflexión:
+
+¿Qué entendía mal antes?
+
+No sabía del uso de streams en Java, ni de sus métodos como filter, map, sorted, peek, anyMatch, etc. No tenía claro cómo encadenar operaciones para procesar colecciones de datos de manera eficiente y legible.
+
+¿Qué entiendo ahora?
+
+Ahora entiendo que los Streams en Java son una herramienta poderosa para procesar colecciones de datos de manera funcional. Puedo usar métodos como filter para filtrar elementos, map para transformar datos, sorted para ordenar, peek para inspeccionar el flujo de datos, y anyMatch para verificar condiciones. Esto me permite escribir código más limpio y eficiente al trabajar con listas y otras colecciones.
+
+¿Qué me falta reforzar?
+
+Me falta reforzar la práctica con Streams para familiarizarme más con sus métodos y cómo combinarlos de manera efectiva. También quiero profundizar en el rendimiento de los Streams y cómo optimizar su uso en diferentes escenarios.
