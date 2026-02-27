@@ -1,19 +1,20 @@
-package edu.dosw.bitacora.bitacora_DOSW.semana1.streams;
+package semana1.streams;
 
 import java.util.List;
 
-public class ActiveUsers {
+public class AdultsName {
 
-    public boolean getActive(List<String> user){
-        return user.get(3).equals("active");
+    public boolean isAdult(List<String> user){
+        String ageS = user.get(2);
+        Integer age = Integer.parseInt(ageS);
+        return age >= 18;
     }
-
     public String getName(List<String> user){
         return user.get(1);
     }
 
     public static void main(String[] args) {
-        List<List<String>> users = List.of(
+        List<List<String>>users = List.of(
                 List.of("u1" , "mari", "20", "active"),
                 List.of("u1" , "mono", "6", "inactive"),
                 List.of("u2" , "shawn mendes", "27", "active"),
@@ -22,12 +23,11 @@ public class ActiveUsers {
                 List.of("u1" , "messi", "38", "inactive"),
                 List.of("u4" , "the weekend", "35", "active")
         );
-        ActiveUsers activeUsers = new ActiveUsers();
+        AdultsName adultsName = new AdultsName();
         List<String> names = users.stream()
-                .filter(user -> activeUsers.getActive(user))
-                        .map(user -> activeUsers.getName(user).toUpperCase())
-                        .sorted().toList();
-
+                .filter(user -> adultsName.isAdult(user))
+                .map(user -> adultsName.getName((user)))
+                .toList();
         System.out.println(names);
     }
 }

@@ -1,4 +1,4 @@
-package edu.dosw.bitacora.bitacora_DOSW.semana1.streams;
+package semana1.streams;
 
 public class Transaction {
     String id;
