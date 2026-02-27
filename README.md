@@ -671,3 +671,43 @@ Framework de pruebas unitarias en Java.
 
 ```bash
 mvn test
+
+## Singleton
+<img width="413" height="337" alt="image" src="https://github.com/user-attachments/assets/de8fdc52-83d0-4a7a-94be-6c0aa4c86261" />
+### se usa:
+<img width="308" height="60" alt="image" src="https://github.com/user-attachments/assets/d775f75c-86fa-4501-8742-6a04c70a5a11" />
+
+## Prototype:
+<img width="429" height="337" alt="image" src="https://github.com/user-attachments/assets/a86b171e-52db-4608-834e-f22d3c6f9ac4" />
+### se usa:
+<img width="502" height="55" alt="image" src="https://github.com/user-attachments/assets/22f2cc9d-b9f8-4f3e-91d7-5126653c829c" />
+
+## Facade:
+<img width="611" height="287" alt="image" src="https://github.com/user-attachments/assets/d47c665c-02a4-44c6-94f8-c69ce6756062" />
+### se usa:
+<img width="207" height="59" alt="image" src="https://github.com/user-attachments/assets/4ac36c82-9b35-4fd8-91c1-dd4a46ba303f" />
+
+## Observer:
+<img width="590" height="507" alt="image" src="https://github.com/user-attachments/assets/e92e38b1-dd5d-4ff7-8f46-411472940102" />
+### se usa:
+<img width="273" height="74" alt="image" src="https://github.com/user-attachments/assets/a5c3df7d-7803-407e-a372-bb6633a0fdb3" />
+
+##Mediator:
+<img width="610" height="475" alt="image" src="https://github.com/user-attachments/assets/8f79ef40-fc5f-466a-b81f-f491b62f4a55" />
+### se usa:
+<img width="325" height="152" alt="image" src="https://github.com/user-attachments/assets/dfdcd506-e257-40b7-ab72-7e4d030d926e" />
+
+## Template4 Method:
+<img width="506" height="265" alt="image" src="https://github.com/user-attachments/assets/e940ecfb-c320-4ae0-84c9-a86d05042645" />
+### se usa:
+<img width="345" height="53" alt="image" src="https://github.com/user-attachments/assets/22996fc0-8849-43c3-a035-deb6d2108662" />
+
+
+
+
+
+
+
+
+
+
