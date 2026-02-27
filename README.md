@@ -463,3 +463,211 @@ Unidad pequeña desde perspectiva del usuario.
 
 ## Tarea
 Acción técnica específica.
+
+# 📘 DOSW 2 – Semana 6  
+## Pruebas de Software, TDD y Calidad de Código
+
+---
+
+# 📌 Contenido
+
+- Pruebas de Software
+- Vulnerabilidades
+- Tipos de Pruebas
+- TDD (Test Driven Development)
+- Criterios de Aceptación
+- Principios de las Pruebas
+- Partes de una Prueba (AAA)
+- Cobertura de Pruebas
+- JUnit
+- JaCoCo
+- SonarQube
+- Mocks y Stubs
+- Buenas Prácticas
+
+---
+
+# 🧪 Pruebas de Software
+
+## ¿Qué son?
+
+Proceso de evaluar y verificar que un producto o aplicación de software hace lo que se supone que debe hacer.
+
+## ¿Por qué son importantes?
+
+- Previenen errores (no al 100%).
+- Mejoran el rendimiento.
+- Identifican:
+  - Defectos de arquitectura
+  - Decisiones de diseño incorrectas
+  - Funcionalidades inválidas
+  - Vulnerabilidades
+- Son más efectivas cuando se realizan de manera continua (desde diseño hasta producción).
+
+---
+
+# 🔐 Vulnerabilidad
+
+## ¿Qué es?
+
+Debilidad en un sistema que puede ser explotada por un actor malintencionado.
+
+## Ejemplos
+
+- Servicio ejecutándose en un puerto lógico abierto.
+- Sistemas o aplicaciones sin actualizar.
+- Red WiFi abierta.
+- Mala gestión de contraseñas.
+
+---
+
+# 🧩 Tipos de Pruebas
+
+## 🔹 Pruebas Unitarias
+
+- Pruebas de bajo nivel.
+- Verifican métodos o funciones individuales.
+- Se realizan cerca del código fuente.
+
+**Ejemplo:** probar el método `suma()` de una calculadora.
+
+---
+
+## 🔹 Pruebas Funcionales
+
+- Se basan en requisitos del negocio.
+- Verifican el resultado final.
+- No revisan estados internos.
+
+**Ejemplo:** probar el login de una aplicación.
+
+---
+
+## 🔹 Pruebas de Carga
+
+- Evalúan el rendimiento bajo condiciones de estrés.
+- Simulan tráfico alto.
+- Miden:
+  - Capacidad
+  - Tiempo de respuesta
+  - Uso de recursos
+
+**Ejemplo:** probar una pasarela de pagos en Black Friday.
+
+---
+
+## 🔹 Pruebas de Caja Negra
+
+- No se conoce el código interno.
+- Solo se evalúa el comportamiento externo.
+
+---
+
+## 🔹 Pruebas de Caja Blanca
+
+- Se tiene acceso al código fuente.
+- Se analiza la estructura interna del sistema.
+
+---
+
+# 🔄 TDD – Test Driven Development
+
+## ¿Qué es?
+
+Práctica de desarrollo donde:
+
+1. Se escribe primero la prueba.
+2. Luego se escribe el código que la haga pasar.
+3. Finalmente se refactoriza el código.
+
+## Ciclo de TDD
+
+- 🔴 **Rojo** → El test falla.
+- 🟢 **Verde** → El código pasa el test.
+- ♻ **Refactor** → Se mejora el código sin cambiar su comportamiento.
+
+---
+
+# 📝 Criterios de Aceptación
+
+## ¿Qué son?
+
+Condiciones que una funcionalidad debe cumplir para considerarse terminada y aceptada.
+
+## Características
+
+- Se escriben desde la perspectiva del usuario.
+- Definen el “Definition of Done”.
+- Son medibles y verificables.
+- Sirven como base para las pruebas.
+
+## Ejemplo (Login)
+
+- Permitir ingresar correo y contraseña válidos.
+- Redirigir a la página principal si son correctos.
+- Mostrar mensaje si son incorrectos.
+- Ocultar caracteres en el campo contraseña.
+- Incluir enlace para recuperación.
+
+---
+
+# 📏 Principios de las Pruebas
+
+1. Las pruebas demuestran la presencia de defectos, no su ausencia.
+2. El testing exhaustivo es imposible.
+3. Las pruebas tempranas ahorran tiempo y recursos.
+4. Agrupación de defectos (80/20).
+5. Paradoja del pesticida.
+6. El testing depende del contexto.
+7. Falacia de ausencia de incidentes.
+
+---
+
+# 🧪 Partes de una Prueba (AAA)
+
+## Arrange
+Preparar el escenario:
+- Crear objetos.
+- Inicializar datos.
+- Configurar mocks.
+
+## Act
+Ejecutar la acción a probar.
+
+## Assert
+Verificar que el resultado obtenido es el esperado.
+
+---
+
+# 📊 Cobertura de Pruebas
+
+## ¿Qué es?
+
+Métrica que indica qué porcentaje del código ha sido ejecutado durante las pruebas.
+
+## Importante
+
+- Alta cobertura ≠ sistema libre de errores.
+- Es indicador de calidad de tests, no del sistema.
+
+---
+
+# 🧰 JUnit
+
+Framework de pruebas unitarias en Java.
+
+## Características
+
+- Usa anotaciones:
+  - `@Test`
+  - `@BeforeEach`
+  - `@AfterEach`
+- Usa asserts:
+  - `assertEquals`
+  - `assertTrue`
+- Se integra con Maven, Gradle e IDEs.
+
+## Ejecución en Maven
+
+```bash
+mvn test
