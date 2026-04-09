@@ -1,4 +1,4 @@
-package edu.dosw.bitacora.bitacora_DOSW.semana1.model;
+package edu.dosw.bitacora.bitacora_DOSW.semana1S7.model;
 
 import java.util.List;
 import java.util.Objects;

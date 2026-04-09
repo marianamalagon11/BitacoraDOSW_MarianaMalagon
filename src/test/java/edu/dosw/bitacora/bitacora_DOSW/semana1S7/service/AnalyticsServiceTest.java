@@ -1,7 +1,7 @@
-package edu.dosw.bitacora.bitacora_DOSW.semana1.service;
+package edu.dosw.bitacora.bitacora_DOSW.semana1S7.service;
 
-import edu.dosw.bitacora.bitacora_DOSW.semana1.model.Grade;
-import edu.dosw.bitacora.bitacora_DOSW.semana1.model.Student;
+import edu.dosw.bitacora.bitacora_DOSW.semana1S7.model.Grade;
+import edu.dosw.bitacora.bitacora_DOSW.semana1S7.model.Student;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
