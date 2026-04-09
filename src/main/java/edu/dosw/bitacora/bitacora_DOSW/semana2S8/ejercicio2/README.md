@@ -23,3 +23,4 @@
 ## Ejecución de pruebas y cobertura
 
 ### Pruebas unitarias
+![testej2.png](../images/testej2.png)
