@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AnalyticsService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">bitacoraDows</a> &gt; <a href="index.source.html" class="el_package">edu.dosw.bitacora.bitacora_DOSW.semana1S7.service</a> &gt; <span class="el_source">AnalyticsService.java</span></div><h1>AnalyticsService.java</h1><pre class="source lang-java linenums">package edu.dosw.bitacora.bitacora_DOSW.semana1S7.service;
+
+import edu.dosw.bitacora.bitacora_DOSW.semana1S7.model.Grade;
+import edu.dosw.bitacora.bitacora_DOSW.semana1S7.model.Student;
+
+import java.util.*;
+import java.util.stream.*;
+
+<span class="fc" id="L9">public class AnalyticsService {</span>
+
+    public List&lt;Student&gt; getAzulStudents(List&lt;Student&gt; students) {
+<span class="fc" id="L12">        return students.stream()</span>
+<span class="fc" id="L13">                .filter(s -&gt; &quot;AZUL&quot;.equalsIgnoreCase(s.getTeam()))</span>
+<span class="fc" id="L14">                .collect(Collectors.toList());</span>
+    }
+
+
+    public List&lt;String&gt; getStudentNamesSorted(List&lt;Student&gt; students) {
+<span class="fc" id="L19">        return students.stream()</span>
+<span class="fc" id="L20">                .map(Student::getName)</span>
+<span class="fc" id="L21">                .sorted()</span>
+<span class="fc" id="L22">                .collect(Collectors.toList());</span>
+    }
+
+
+    public double getGlobalAverage(List&lt;Student&gt; students) {
+<span class="fc" id="L27">        return students.stream()</span>
+<span class="fc" id="L28">                .flatMap(s -&gt; s.getGrades().stream())</span>
+<span class="fc" id="L29">                .mapToDouble(Grade::getScore)</span>
+<span class="fc" id="L30">                .average()</span>
+<span class="fc" id="L31">                .orElse(0.0);</span>
+    }
+
+
+    public Map&lt;String, Double&gt; getAveragePerSubject(Student student) {
+<span class="fc" id="L36">        return student.getGrades().stream()</span>
+<span class="fc" id="L37">                .collect(Collectors.groupingBy(</span>
+                        Grade::getSubject,
+<span class="fc" id="L39">                        Collectors.averagingDouble(Grade::getScore)</span>
+                ));
+    }
+
+
+    public Optional&lt;Student&gt; getTopStudent(List&lt;Student&gt; students) {
+<span class="fc" id="L45">        return students.stream()</span>
+<span class="fc" id="L46">                .max(Comparator.comparingDouble(this::getStudentAverage));</span>
+    }
+
+    private double getStudentAverage(Student student) {
+<span class="fc" id="L50">        return student.getGrades().stream()</span>
+<span class="fc" id="L51">                .mapToDouble(Grade::getScore)</span>
+<span class="fc" id="L52">                .average().orElse(0.0);</span>
+    }
+
+    public Map&lt;String, Long&gt; getFailedSubjectsByTeam(List&lt;Student&gt; students) {
+<span class="fc" id="L56">        return students.stream()</span>
+<span class="fc" id="L57">                .collect(Collectors.groupingBy(</span>
+                        Student::getTeam,
+<span class="fc" id="L59">                        Collectors.flatMapping(</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">                                s -&gt; s.getGrades().stream().filter(g -&gt; !g.isPassed()),</span>
+<span class="fc" id="L61">                                Collectors.counting()</span>
+                        )
+                ));
+    }
+
+
+    public List&lt;Student&gt; getTop3ApprovedSubjects(List&lt;Student&gt; students) {
+<span class="fc" id="L68">        return students.stream()</span>
+<span class="fc" id="L69">                .sorted((a, b) -&gt; {</span>
+<span class="fc" id="L70">                    long bCount = b.getGrades().stream().filter(Grade::isPassed).count();</span>
+<span class="fc" id="L71">                    long aCount = a.getGrades().stream().filter(Grade::isPassed).count();</span>
+<span class="fc" id="L72">                    return Long.compare(bCount, aCount);</span>
+                })
+<span class="fc" id="L74">                .limit(3)</span>
+<span class="fc" id="L75">                .collect(Collectors.toList());</span>
+    }
+
+
+    public Map&lt;String, List&lt;Student&gt;&gt; groupByAcademicState(List&lt;Student&gt; students) {
+<span class="fc" id="L80">        return students.stream().collect(Collectors.groupingBy(s -&gt; {</span>
+<span class="fc" id="L81">            double avg = getStudentAverage(s);</span>
+<span class="fc bfc" id="L82" title="All 2 branches covered.">            if (avg &gt;= 4.5) return &quot;ALTO RENDIMIENTO&quot;;</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">            else if (avg &gt;= 3.5) return &quot;REGULAR&quot;;</span>
+<span class="fc" id="L84">            else return &quot;RIESGO&quot;;</span>
+        }));
+    }
+
+
+    public String getMostFailedSubject(List&lt;Student&gt; students) {
+<span class="fc" id="L90">        return students.stream()</span>
+<span class="fc" id="L91">                .flatMap(s -&gt; s.getGrades().stream())</span>
+<span class="fc bfc" id="L92" title="All 2 branches covered.">                .filter(g -&gt; !g.isPassed())</span>
+<span class="fc" id="L93">                .collect(Collectors.groupingBy(</span>
+<span class="fc" id="L94">                        Grade::getSubject, Collectors.counting()</span>
+                ))
+<span class="fc" id="L96">                .entrySet().stream()</span>
+<span class="fc" id="L97">                .max(Map.Entry.comparingByValue())</span>
+<span class="fc" id="L98">                .map(Map.Entry::getKey)</span>
+<span class="fc" id="L99">                .orElse(null);</span>
+    }
+
+    public LinkedHashMap&lt;String, Double&gt; getAzulApprovedAverages(List&lt;Student&gt; students) {
+<span class="fc" id="L103">        Map&lt;String, Double&gt; map = students.stream()</span>
+<span class="fc" id="L104">                .filter(s -&gt; &quot;AZUL&quot;.equalsIgnoreCase(s.getTeam()))</span>
+<span class="fc" id="L105">                .flatMap(s -&gt; s.getGrades().stream())</span>
+<span class="fc" id="L106">                .filter(Grade::isPassed)</span>
+<span class="fc" id="L107">                .collect(Collectors.groupingBy(</span>
+                        Grade::getSubject,
+<span class="fc" id="L109">                        Collectors.averagingDouble(Grade::getScore)</span>
+                ));
+<span class="fc" id="L111">        return map.entrySet().stream()</span>
+<span class="fc" id="L112">                .sorted(Map.Entry.&lt;String, Double&gt;comparingByValue().reversed())</span>
+<span class="fc" id="L113">                .collect(Collectors.toMap(</span>
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+<span class="nc" id="L116">                        (oldVal, newVal) -&gt; oldVal,</span>
+                        LinkedHashMap::new
+                ));
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
