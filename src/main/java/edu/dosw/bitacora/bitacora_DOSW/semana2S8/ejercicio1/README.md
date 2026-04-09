@@ -19,4 +19,4 @@
 - **Notification**: Clase que usa el Strategy y el Singleton.
 
 ### Pruebas:
-
+![test.png](../images/test.png)
